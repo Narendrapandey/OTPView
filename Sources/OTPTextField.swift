@@ -8,14 +8,14 @@
 import SwiftUI
 import Combine
 
-struct OTPTextField: View {
+public struct OTPTextField: View {
     @FocusState private var keyboardFocusedField: FocusField?
     @Binding var verificationCode: String
     @State var isAllNumbersFilled:Bool = false
     
-    var pinLength: Int = 6
-    var keyboardType: UIKeyboardType = .numberPad
-    var onComplete: () -> ()
+    public var pinLength: Int = 6
+    public var keyboardType: UIKeyboardType = .numberPad
+    public var onComplete: () -> ()
     
     var body: some View {
         ZStack {
