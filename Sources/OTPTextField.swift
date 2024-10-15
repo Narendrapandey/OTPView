@@ -17,7 +17,7 @@ public struct OTPTextField: View {
     public var keyboardType: UIKeyboardType = .numberPad
     public var onComplete: () -> ()
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             TextField("", text: $verificationCode)
                 .frame(width: 0, height: 0, alignment: .center)
