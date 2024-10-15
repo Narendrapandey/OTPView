@@ -12,9 +12,9 @@ public struct OTPTextFieldView: View {
     @State private var verificationCode = ""
     @FocusState private var focusedField: FocusField?
     
-    var pinLength: Int = 6
-    var keyboardType: UIKeyboardType = .numberPad
-    var onComplete: (String) -> ()
+    public var pinLength: Int = 6
+    public var keyboardType: UIKeyboardType = .numberPad
+    public var onComplete: (String) -> ()
     
     public var body: some View {
         ZStack(alignment: .center) {
