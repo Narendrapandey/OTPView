@@ -16,6 +16,12 @@ public struct OTPTextFieldView: View {
     public var keyboardType: UIKeyboardType = .numberPad
     public var onComplete: (String) -> ()
     
+    public init(pinLength: Int, keyboardType: UIKeyboardType, onComplete: @escaping (String) -> Void) {
+        self.pinLength = pinLength
+        self.keyboardType = keyboardType
+        self.onComplete = onComplete
+    }
+    
     public var body: some View {
         ZStack(alignment: .center) {
             OTPTextField(verificationCode: $verificationCode, pinLength: pinLength, keyboardType: keyboardType) {
